@@ -25,7 +25,7 @@ INSERT INTO albums (album, "date") VALUES
 
 -- заполняем таблицу songs
 
-INSERT INTO songs (id, song, duration, album_id)vVALUES
+INSERT INTO songs (id, song, duration, album_id)vALUES
 (1, 'rap_song_1', 180, 1),
 (2, 'rap_song_2', 185, 1),
 (3, 'my_rap_song_3', 190, 1),

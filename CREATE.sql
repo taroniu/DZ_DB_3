@@ -15,7 +15,6 @@ CREATE TABLE IF NOT EXISTS albums(
 
 CREATE TABLE IF NOT EXISTS artists (
 	id serial PRIMARY KEY,
-	album_id integer REFERENCES albums(id),
 	artist varchar(40) UNIQUE NOT NULL
 );
 
@@ -23,6 +22,7 @@ CREATE TABLE IF NOT EXISTS artists (
 
 CREATE TABLE IF NOT EXISTS songs(
 	id serial PRIMARY KEY,
+	album_id integer REFERENCES albums(id),
 	song varchar(40) UNIQUE NOT NULL,
 	duration integer CHECK (duration BETWEEN 170 AND 300) NOT NULL 
 );
